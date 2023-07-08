@@ -25,11 +25,17 @@
     // define("PI", 3.14);
     // echo defined("PI");
 
-    // Array 
-    $arr_1 = [2, 4, 6, 3, 18];
-    foreach($arr_1 as $value) {
-      echo $value . '<br>';
-    }
+    // // Array 
+    // $arr_1 = [2, 4, 6, 3, 18];
+    // foreach($arr_1 as $value) {
+    //   echo $value . '<br>';
+    // }
+
+    $arr_1 = [2, 4, 6, 7];
+    $count_arr = count($arr_1);
+    for($i = 0; $i < $count_arr; $i++) {
+      echo $arr_1[$i];
+    };
   ?>
 
 </body>
