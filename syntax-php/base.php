@@ -9,20 +9,27 @@
 <body>
 
   <?php
-    // Вывод чего либо на страницу
-    echo 'Hello' . '<br>ilya';
-    // переменные php
-    $number = 3; // integer
-    $num = 4.6; // float
-    $word = 'text content';
-    echo '<br>Number:' . $number . '<br>';
-    // const default 
-    echo 'php version:' . PHP_VERSION . '<br>';
-    // method defined response true || false 
-    echo defined("PHP_VERSION");
-    // method create const 
-    define("PI", 3.14);
-    echo defined("PI");
+
+    // // Вывод чего либо на страницу
+    // echo 'Hello' . '<br>ilya';
+    // // переменные php
+    // $number = 3; // integer
+    // $num = 4.6; // float
+    // $word = 'text content';
+    // echo '<br>Number:' . $number . '<br>';
+    // // const default 
+    // echo 'php version:' . PHP_VERSION . '<br>';
+    // // method defined response true || false 
+    // echo defined("PHP_VERSION");
+    // // method create const 
+    // define("PI", 3.14);
+    // echo defined("PI");
+
+    // Array 
+    $arr_1 = [2, 4, 6, 3, 18];
+    foreach($arr_1 as $value) {
+      echo $value . '<br>';
+    }
   ?>
 
 </body>
