@@ -16,7 +16,7 @@
       $this->color = $color;
     }
 
-    function showInfo() {
+    final function showInfo() {
       echo "Speed car: " . $this->speed . '<br>';
     }
   }
@@ -28,11 +28,11 @@
       parent::__construct($speed, $color);
       $this->model = $model;
     }
-    function showInfo() {
-      echo "Speed car: " . $this->speed . '<br>';
-      echo "Model car: " . $this->model . '<br>';
-      echo "Color car: " . $this->color . '<br>';
-    }
+    // function showInfo() {
+    //   echo "Speed car: " . $this->speed . '<br>';
+    //   echo "Model car: " . $this->model . '<br>';
+    //   echo "Color car: " . $this->color . '<br>';
+    // }
   }
 
   class Audi extends Car {}
