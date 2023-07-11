@@ -16,7 +16,7 @@
       $this->color = $color;
     }
 
-    function showSpeed() {
+    function showInfo() {
       echo "Speed car: " . $this->speed . '<br>';
     }
   }
@@ -28,8 +28,8 @@
       parent::__construct($speed, $color);
       $this->model = $model;
     }
-    
-    function setModel() {
+    function showInfo() {
+      echo "Speed car: " . $this->speed . '<br>';
       echo "Model car: " . $this->model . '<br>';
       echo "Color car: " . $this->color . '<br>';
     }
@@ -38,8 +38,7 @@
   class Audi extends Car {}
 
   $m3 = new BMW(340, "black", "m3");
-  $m3->showSpeed();
-  $m3->setModel();
+  $m3->showInfo();
   ?>
 </body>
 </html>
