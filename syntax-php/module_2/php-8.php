@@ -43,4 +43,4 @@ echo match($num) {
   9.34 => "number",
 };
 
-$country = $session?->user?->good;
+$country = $session?->user?->getAddress()?->$country;
