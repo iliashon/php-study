@@ -20,16 +20,9 @@
         exit();
     }
 
-    $user = 'root';
-    $pass = 'root';
-    $host = 'localhost';
-    $db_name = 'first-site-php';
-    $port =  3306;
+    require_once('../lib/MySQL.php');
 
     $password = md5($password);
-
-    $dsn = 'mysql:host=' . $host . ';dbname=' . $db_name . ';port=' . $port;
-    $pdo = new PDO($dsn, $user, $pass);
 
     $sql = 'INSERT INTO users(name, email, login, password) VALUES(?, ?, ?, ?)';
 
