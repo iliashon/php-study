@@ -14,7 +14,7 @@
 
   <main>
     <h1>Register</h1>
-    <form action="/first-site-php/ajax/reg.php" method="post">
+    <form>
       <label for="username">Name</label>
       <input type="text" name="username" id="username">
        
@@ -27,13 +27,46 @@
       <label for="password">Password</label>
       <input type="password" name="password" id="password">
 
-      <button type="submit">Register</button>
+      <div class="error_msg" id="error_block"></div>
+
+      <button type="button" id="reg_user">Register</button>
     </form>
   </main>
 
   <?php require "./blocks/aside.php" ?>
 
   <?php require "./blocks/footer.php" ?>
+
+  <script>
+    $('#reg_user').click(function(){
+      let name = $('#username').val();
+      let email = $('#email').val();
+      let login = $('#login').val();
+      let pass = $('#password').val();
+
+      $.ajax({
+        url: 'ajax/reg.php',
+        type: 'POST',
+        cache: false,
+        data: {
+          'username':name,
+          'email':email,
+          'login':login,
+          'password':pass,
+        },
+        dataType: 'html',
+        success: function(data) {
+          if (data === 'Done') {
+            $('#reg_user').text('Good');
+            $('#error_block').hide();
+          } else {
+            $('#error_block').show();
+            $('#error_block').text(data);
+          }
+        }
+      })
+    });
+  </script>
 
 </body>
 

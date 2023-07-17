@@ -4,13 +4,19 @@
     $password = trim(filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS));
     $login = trim(filter_var($_POST['login'], FILTER_SANITIZE_SPECIAL_CHARS));
 
+    $error = '';
     if (strlen($username) < 2) {
-        exit();
+        $error = 'Name invalid';
     } else if (strlen($email) < 5) {
-        exit();
+        $error = 'Email invalid';
     } else if (strlen($password) < 5) {
-        exit();
+        $error = 'Password invalid';
     } else if (strlen($login) < 3) {
+        $error = 'Login invalid';
+    }
+
+    if ($error != '') {
+        echo $error;
         exit();
     }
 
@@ -30,3 +36,5 @@
     $query = $pdo->prepare($sql);
 
     $query->execute([$username, $email, $login, $password]);
+
+    echo 'Done';

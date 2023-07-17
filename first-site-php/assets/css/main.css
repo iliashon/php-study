@@ -128,3 +128,10 @@ form button:hover {
   background-color: blanchedalmond;
   color: #ffc007;
 }
+
+.error_msg {
+  color: red;
+  margin: 10px 0;
+  font-weight: 600;
+  display: none;
+}
