@@ -33,7 +33,7 @@
             $dsn = 'mysql:host=' . $this->db_host . ';dbname=' . $this->db_db;
 
             $pdo = new PDO($dsn, $this->db_user, $this->db_password);
-        
+
             $query = $pdo->query("SELECT * FROM `orders`");
 
             echo "<h2>All orders</h2>";
@@ -44,11 +44,12 @@
                 echo '<br>';
             }
         }
-        function checkNameById($id, $table, $select) {
+        function checkNameById($id, $table, $select)
+        {
             $dsn = 'mysql:host=' . $this->db_host . ';dbname=' . $this->db_db;
 
             $pdo = new PDO($dsn, $this->db_user, $this->db_password);
-        
+
             $query = $pdo->query("SELECT `$select` FROM `$table` WHERE `id` = $id");
 
             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
@@ -62,11 +63,6 @@
     }
 
     $db_obj = new CreateOrders();
-    $db_obj->addOrder('2', '3');
-    $db_obj->addOrder('3', '2');
-    $db_obj->addOrder('1', '4');
-    $db_obj->addOrder('3', '1');
-    $db_obj->addOrder('2', '4');
     $db_obj->showAllOrders();
     ?>
 </body>
