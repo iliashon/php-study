@@ -14,17 +14,24 @@
         private $db_host = 'localhost';
         private $db_user = 'root';
         private $db_db = 'simple';
+        private $pdo;
         public $query;
+
+        function __construct() {
+            $this->pdo = $this->conectDB();
+        }
+
+        function conectDB (){
+            $dsn = 'mysql:host=' . $this->db_host . ';dbname=' . $this->db_db;
+
+            return new PDO($dsn, $this->db_user, $this->db_password);
+        }
 
         function addOrder($user_id, $item_id)
         {
-            $dsn = 'mysql:host=' . $this->db_host . ';dbname=' . $this->db_db;
-
-            $pdo = new PDO($dsn, $this->db_user, $this->db_password);
-
             $sql = 'INSERT INTO `orders`(user_id, item_id) VALUES( :userId, :itemId);';
 
-            $query = $pdo->prepare($sql);
+            $query = $this->pdo->prepare($sql);
 
             $query->execute(['itemId' => $item_id, 'userId' => $user_id,]);;
         }
