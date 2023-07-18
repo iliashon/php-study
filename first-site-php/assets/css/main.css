@@ -135,3 +135,41 @@ form button:hover {
   font-weight: 600;
   display: none;
 }
+
+.user_block {
+  width: 100%;
+  height: 60px;
+  background-color: #ffc007;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.user_info {
+  display: flex;
+  gap: 20px;
+}
+
+.user_info h3 {
+  font-weight: 200;
+}
+
+.delete_user {
+  height: 70%;
+  width: 100px;
+  background-color: #d46060;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.delete_user:hover {
+  background-color: darkred;
+}
