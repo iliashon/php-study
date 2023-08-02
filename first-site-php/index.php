@@ -23,7 +23,7 @@
                     <h2> <?= $row->title ?> </h2>
                     <p> <?= $row->anons ?> </p>
                     <p class='author'> Author: <span><?= $row->author ?></span> </p>
-                    <a href='/'> READ </a>
+                    <a href='./post.php?id=<?= $row->id ?>' title="<?= $row->title ?>"> READ </a>
                 </div>
         <?php 
             }

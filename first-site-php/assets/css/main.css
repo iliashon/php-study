@@ -208,3 +208,13 @@ form button:hover, .post a:hover {
   transition: 0.3s;
   text-align: center;
 }
+
+.comment {
+  width: 100%;
+  background-color: #ffc007;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #434143;
+  margin-top: 20px;
+}
