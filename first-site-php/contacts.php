@@ -26,7 +26,7 @@
 
       <div class="error_msg" id="error_block"></div>
 
-      <button type="button" id="add_article">Send</button>
+      <button type="button" id="mess_send">Send</button>
     </form>
   </main>
 
@@ -35,28 +35,28 @@
   <?php require "./blocks/footer.php" ?>
 
   <script>
-    $('#add_article').click(function(){
-      let title = $('#title').val();
-      let anons = $('#anons').val();
-      let full_text = $('#full_text').val();
+    $('#mess_send').click(function(){
+      let name = $('#title').val();
+      let enail = $('#email').val();
+      let mess = $('#mess').val();
 
       $.ajax({
-        url: 'ajax/add_article.php',
+        url: 'ajax/mail.php',
         type: 'POST',
         cache: false,
         data: {
-          'title':title,
-          'anons':anons,
-          'full_text':full_text,
+          'name':name,
+          'email':email,
+          'mess':mess,
         },
         dataType: 'html',
         success: function(data) {
           if (data === 'Done') {
             $('#add_article').text('Sended');
             $('#error_block').hide();
-            $('#title').val("");
-            $('#anons').val("");
-            $('#full_text').val("");
+            $('#username').val("");
+            $('#email').val("");
+            $('#mess').val("");
           } else {
             $('#error_block').show();
             $('#error_block').text(data);
