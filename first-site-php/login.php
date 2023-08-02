@@ -13,7 +13,7 @@
     <?php require "./blocks/header.php" ?>
 
     <main>
-        <?php if (!isset($_COOKIE['log'])) : ?>
+        <?php if (!isset($_COOKIE['login'])) : ?>
             <h1>Login</h1>
             <form>
                 <label for="login">Login</label>
@@ -27,7 +27,7 @@
                 <button type="button" id="login_user">Enter</button>
             </form>
         <?php else : ?>
-            <h2><?= $_COOKIE['log'] ?></h2>
+            <h2><?= $_COOKIE['login'] ?></h2>
             <form>
                 <button type="button" id="exit_user">Go out</button>
             </form>

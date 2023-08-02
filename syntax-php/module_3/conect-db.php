@@ -30,7 +30,7 @@
     $name = 'Alex';
     $sql = 'SELECT `login`, `email` FROM `users` WHERE `name` = ?';
     $query = $pdo->prepare($sql);
-    $query->execute([$name] );
+    $query->execute([$name]);
     $users = $query->fetchAll(PDO::FETCH_OBJ);
     var_dump($users);
 

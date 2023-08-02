@@ -97,7 +97,8 @@ form {
   margin: 30px 0;
 }
 
-form input {
+form input, form textarea {
+  resize: vertical;
   display: block;
   margin-bottom: 5px;
   width: 100%;
@@ -124,7 +125,7 @@ form button {
   transition: 0.3s;
 }
 
-form button:hover {
+form button:hover, .post a:hover {
   background-color: blanchedalmond;
   color: #ffc007;
 }
@@ -172,4 +173,38 @@ form button:hover {
 
 .delete_user:hover {
   background-color: darkred;
+}
+
+.post {
+  margin-top: 20px;
+}
+
+.post h2 {
+  margin-bottom: 10px;
+
+}
+
+.post .author {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.post .author span {
+  background-color: #ffc007;
+  padding: 2px 7px;
+  font-weight: 300;
+  border-radius: 2px;
+}
+
+.post a {
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ffc007;
+  color: #434143;
+  transition: 0.3s;
+  text-align: center;
 }
