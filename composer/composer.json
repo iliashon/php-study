@@ -1,0 +1,20 @@
+{
+    "name": "vrndor/app",
+    "description": "homework",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vrndor\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ilya Tupalski"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master",
+        "erusev/parsedown": "dev-master"
+    }
+}
